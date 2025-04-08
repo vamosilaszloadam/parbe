@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 public class MainController {
@@ -13,7 +14,26 @@ public class MainController {
     Stage stage = new Stage();
 
     @FXML
-    void onClickShowButton(ActionEvent event) {
+    public ListView<String> carList;
+
+    @FXML
+    void initialize() {
+        System.out.println("initialize...");
+        App._stage.setOnCloseRequest(event -> {
+            System.out.println("onCloseRequest...");
+
+            StringBuilder content = new StringBuilder();
+            for (String car : carList.getItems()) {
+                content.append(car);
+                content.append("\n");
+            }
+
+            Store.writeCars(content.toString());
+        });
+    }
+
+    @FXML
+    void onClickAddButton(ActionEvent event) {
         showDialog();
     }
     

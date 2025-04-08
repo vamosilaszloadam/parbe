@@ -2,11 +2,15 @@ package com.example;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class DialogController {
 
     MainController mainController;
+
+    @FXML
+    private TextField plateField;
 
     @FXML
     void onClickCloseButton(ActionEvent event) {
@@ -19,6 +23,7 @@ public class DialogController {
 
         // stage.close();
 
+        mainController.carList.getItems().add(plateField.getText());
         mainController.stage.close();
 
     }
