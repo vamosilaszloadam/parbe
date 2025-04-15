@@ -6,7 +6,10 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MainController">
    <children>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickAddButton" text="Hozzáad" />
-      <ListView fx:id="carList" layoutX="113.0" layoutY="66.0" prefHeight="268.0" prefWidth="375.0" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickAddButton" text="Hozzáadás" />
+      <ListView fx:id="carList" layoutX="14.0" layoutY="66.0" prefHeight="268.0" prefWidth="375.0" />
+      <Button layoutX="405.0" layoutY="110.0" mnemonicParsing="false" onAction="#onClickDelButton" text="Törlés" />
+      <Button layoutX="405.0" layoutY="157.0" mnemonicParsing="false" onAction="#onClickModifyButton" text="Módosítás" />
+      <Button layoutX="405.0" layoutY="200.0" mnemonicParsing="false" onAction="#onClickExitButton" text="Kilépés" />
    </children>
 </Pane>
